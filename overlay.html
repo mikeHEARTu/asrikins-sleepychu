@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Social media carousel for twitch.tv/asrikins">
+	<meta name="keywords" content="twitch, overlay">
+	<meta name="author" content="mikeheartu">
+	<title>asrikins</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/all.css">
+</head>
+
+<script>
+	var slideIndex = 0;
+
+	function carousel() {
+	var i;
+	var x = document.getElementsByClassName("socialContainer");
+	for (i = 0; i < x.length; i++) {
+	x[i].style.display = "none";
+	}
+	slideIndex++;
+	if (slideIndex > x.length) {slideIndex = 1}
+	x[slideIndex-1].style.display = "flex";
+	setTimeout(carousel, 15000); // Change image every 15 seconds
+	}
+</script>
+
+<body onload="carousel()">
+
+	<div class="socialContainer">
+		<img height="110" src="img/sleepychu.png" class="socialImage">
+		<div class="socialTextContainer">
+			<span class="socialText socialTwitter"><i class="socialIcon fab fa-twitter"></i>asrikins</span>
+		</div>
+	</div>
+
+	<div class="socialContainer">
+		<img height="110" src="img/sleepychu.png" class="socialImage">
+		<div class="socialTextContainer">
+			<span class="socialText socialInsta"><i class="socialIcon fab fa-instagram"></i>asrikins</span>
+		</div>
+	</div>
+</body>
+
+</html>
