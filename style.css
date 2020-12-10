@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
+
+body
+{
+	color:#ccc;
+	text-align: right;
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-weight: 400;
+	font-size: 24px;
+	overflow: hidden;
+}
+.testBG
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/hades-screenshot.jpg);
+	background-position: center center;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.testText
+{
+	font-size: 20vw;
+	text-transform: uppercase;
+	text-shadow: 0 1vh 2vw black;
+}
+.testInfo
+{
+	font-size: 2vw;
+	text-transform: uppercase;
+	text-shadow: 0 0.5vh 0.2vw black;
+}
+.testInfo a
+{
+	color:#ccc;
+	transition: 0.2s;
+	text-decoration: none;
+}
+.testInfo a:hover
+{
+	color:#3498db;
+}
+.testInfo a:active
+{
+	color:#3498db;
+}
+.socialContainer
+{
+	position: absolute;
+	bottom: 0;
+	right:0;
+	/* background: red; */
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	justify-content: center;
+	font-size: 30px;
+}
+.socialImage
+{
+	margin-right:12px;
+
+	animation: fadeInUp 1s 1s ease-out backwards, fadeInUp 1s 14s ease-in reverse forwards;
+}
+.socialText
+{
+	display: inline-block;
+	padding: 12px 24px;
+	background: gray;
+	border-radius:24px 24px 0px 24px;
+	border:3px solid black;
+	margin-right:24px;
+
+	animation: fadeInLeft 1s 1.5s ease-out backwards, fadeInLeft 1s 13s ease-in reverse forwards;
+}
+.socialIcon
+{
+	margin-right:12px;
+}
+.socialTwitter
+{
+	background:#1da1f2;
+}
+.socialInsta
+{
+	background:#833ab4;
+	background-image: linear-gradient(to top left, #833ab4, #c13584);
+}
+
+@keyframes fadeInUp
+{
+    from
+	{
+		filter:opacity(0);
+		transform: translateY(24px);
+	}
+	to
+	{
+		filter:opacity(1);
+	}
+}
+
+@keyframes fadeInLeft
+{
+    from
+	{
+		filter:opacity(0);
+		transform: translateX(24px);
+	}
+	to
+	{
+		filter:opacity(1);
+	}
+}
